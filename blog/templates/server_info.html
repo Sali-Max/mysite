@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+  ServerInfo
+{% endblock title %}
+
+
+{% block content %}
+  <h1>ServerInfo</h1>
+
+  <p>OS : {{ system }} {{ release }} {{ version }}</p>
+  <p>Ram Usage : {{ useRam }} GB of {{ ram }} GB</p>
+  <progress id="file" value="{{ useRam }}" max="{{ ram }}"></progress> 
+  <p>CPU : {{ cpu }} Core -- {{ cpuf }} MHZ (Max)</p>
+{% endblock content %}

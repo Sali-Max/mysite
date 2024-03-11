@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | {% block title %} {% endblock %}</title>
+<style>
+body {
+    background-color: #3f4153;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: rgb(216, 156, 25);
+
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    display: inline;
+    color: aquamarine;
+}
+p.big{
+    font-size: xx-large;
+}
+.glass{
+    width: 700px;
+    height: 375px;
+    color: rgb(216, 156, 25);
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 63px;
+        backdrop-filter: blur(7px);
+        box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+        border: 2px rgba(255,255,255,0.4) solid;
+        border-bottom: 2px rgba(40,40,40,0.35) solid;
+        border-right: 2px rgba(40,40,40,0.35) solid;
+}
+p, h2{
+    display: inline;
+}
+
+</style>
+</head>
+<body bgcolor="black">
+    <div class="glass">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+
+</body>
+</html>
